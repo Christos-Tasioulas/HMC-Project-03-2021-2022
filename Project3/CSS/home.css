@@ -1,0 +1,336 @@
+/*************
+ * Main Body *
+ *************/
+
+/* We set the height of the body and the document to 100% to enable "full page tabs" */
+body, html
+{
+  background-color: #e9e7e7ee;
+  font-size: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/******************
+ * Navigation Bar *
+ ******************/
+
+/* Properties of the navigation bar ('Login', 'Sign Up', 'English') */
+.navbar
+{
+  width: 100%;
+  background-color: transparent;
+  overflow: auto;
+}
+
+/* Properties of each link that belongs to the navigation bar */
+.navbar a
+{
+  float: right;
+  text-align: right;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 120%;
+}
+  
+/* Additional properties of each link that belongs to the
+ * navigation bar when the cursor is hovered over a link
+ */
+.navbar a:hover 
+{
+  background-color: grey;
+}
+
+/* Current/Active navigation bar link */
+.active
+{
+  background-color: #04AA6D;
+}
+
+/* We add responsiveness - the navigation bar will automatically be displayed
+ * vertically instead of horizontally on screens with width less than 500 pixels
+ */
+@media screen and (max-width: 500px)
+{
+  .navbar a
+  {
+    float: none;
+    display: block;
+  }
+}
+
+/*******************************************************
+ * Logo Image & Description that accompanies the image *
+ *******************************************************/
+
+
+/* Properties of the logo image and the description of the logo */
+.logo
+{
+  color:rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif; 
+  margin-top: -2%;
+}
+
+/* Properties of the 'h2' heading when it is inside a 'logo' class */
+.logo h2
+{
+  font-size: 2.5em;
+  margin-bottom: 0%;
+  font-weight: 875;
+}
+
+/* Properties of the 'h4' heading when it is inside a 'logo' class */
+.logo h4
+{
+  font-size: 1.5em;
+}
+
+/***********
+ * Headers *
+ ***********/
+
+/* Style the header with a grey background and some padding */
+.header
+{
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Style the header links */
+.header a
+{
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 5px;
+  border-radius: 4px;
+}
+
+/****************
+ * Category Bar *
+ ****************/
+
+/* Properties of each category button (Home, News, etc) */
+.tablink
+{
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%
+}
+
+/* Properties of the active category button */
+.tablink-active
+{
+  background-color: black;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Properties of a non-active category button
+ *                 ^^^^^^^^^^
+ * when the mouse cursor is hovered over it
+ */
+.tablink:hover
+{
+  background-color: #777;
+}
+
+/***********************************************************
+ * Main Home Image, Introductory Text & Recognition Button *
+ ***********************************************************/
+
+/* Properties of the container holding the image, the text and the button */
+.container
+{
+  position: relative;
+  text-align: center;
+  color: #D5D5D5;
+}
+
+.container img
+{
+  height: 35vw;
+}
+
+/* Properties of the text and the button */
+.home_text_and_button
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  color: #ffffff;
+
+  /* we add shadow to the text so as it is
+   * distinct and not mixed with the image
+   */
+  text-shadow: 2px 2px 4px black;
+  font-weight: 900;
+}
+
+/* Properties of the button */
+.button1 {
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 1vw;
+  padding: 0.5vw;
+  width: 40vw;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.button1:hover {
+  background-color: whitesmoke;
+}
+
+/* Properties of the letters inside the button (which are a link) */
+.button1 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Additional properties of the button */
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Properties of the button when the cursor is inside it */
+.button1 span:after {
+  content: '\00bb';
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  top: 23px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* Properties of the button at the time the cursor is hovered over it */
+.button1:hover span {
+  padding-right: 35px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*********************************
+ * Styling of the steps overview *
+ *********************************/
+
+#steps_title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.steps {
+  margin-top: -5px;
+}
+
+.steps ul {
+  background: #8e989ee1;
+  padding: 40px;
+  font-size: 22px;
+  margin-left: 520px;
+  margin-right: 520px;
+}
+
+/*****************************************
+ * Styling of the announcements overview *
+ *****************************************/
+
+#ann_title {
+  font-size: 45px;
+  text-align: center;
+}
+
+.announcement1
+{
+  margin-left: 150px;
+  /*margin-top: -25px;*/
+  background-color: #ffffff;
+}
+
+.announcement1 a
+{
+  font-size: 25px;
+  color: rgb(49, 144, 221);
+}
+
+.announcement2
+{
+  margin-right: 150px;
+  /*margin-top: -25px;*/
+  background-color: #ffffff;
+}
+
+.announcement2 a
+{
+  font-size: 25px;
+  color: rgb(49, 144, 221);
+}
+
+/*************************
+ * Styling of the footer *
+ *************************/
+
+.footer-top {
+  margin-top: -5px;
+  color: #D5D5D5;
+  background-color: #555;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.footer {
+	background-color: #869096;
+}
+
+#myBtn {
+  /* display: none; Hidden by default */
+  position: fixed;                            /* Fixed/sticky position */
+  bottom: 20px;                               /* Place the button at the bottom of the page */
+  right: 30px;                                /* Place the button 30px from the right */
+  z-index: 99;                                /* Make sure it does not overlap */
+  border: none;                               /* Remove borders */
+  outline: none;                              /* Remove outline */
+  background-color: rgba(85, 85, 85, 0.5);  /* Set a background color */
+  color: white;                             /* Text color */
+  cursor: pointer;                            /* Add a mouse pointer on hover */
+  padding: 15px;                              /* Some padding */
+  border-radius: 10px;                        /* Rounded corners */
+  font-size: 18px;                            /* Increase font size */
+}
+
+#myBtn:hover {
+  /* Add a dark-grey background on hover */
+  background-color: #777;
+}
